@@ -124,17 +124,16 @@ PontoArtificial[0] = Fechamento[0]
 
 for i in range(1, len(MovimentoArtificial)):
   PontoArtificial = np.append(PontoArtificial,0)
-  PontoArtificial[i] = PontoArtificial[i-1]
-  multiplyBy = 1
+  factorToMultiply = 1
 
   if i % 2 == 0:  
-    multiplyBy = (1 + MovimentoArtificial[j])
+    factorToMultiply = (1 + MovimentoArtificial[j])
     j += 1
   else:
-    multiplyBy = (1 - CorrecaoArtificial[k])
+    factorToMultiply = (1 - CorrecaoArtificial[k])
     k += 1
 
-  PontoArtificial[i] *= multiplyBy
+  PontoArtificial[i] = PontoArtificial[i-1] * factorToMultiply
 
 #TODO: Continuar implementando a geração de números randômicos obedecendo a probabilidade de cada classe acontecer
 #TODO: Criar rotina para entrar e sair na operação de compra ou venda
