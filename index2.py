@@ -263,12 +263,9 @@ while (TamanhoArtificial != 0):
 
   # mm = calculateMovingAverage(MovimentoArtificial) 
   mm = calculateMovingAverage(Fechamento)
-  print(mm - MovimentoArtificialH, '<= u <', mm + MovimentoArtificialH)
+  print(mm - MovimentoArtificialH, '<= u <=', mm + MovimentoArtificialH)
 
-print((calculateMovingAverage(MovimentoArtificial) + calculateMovingAverage(CorrecaoArtificial)) / 2)
 print('media dados de fechamento', calculateMovingAverage(Fechamento))
-print('mm', mm)
-print('MovimentoArtificialH', MovimentoArtificialH)
 
 #
 #Fibonacci = 0.5
